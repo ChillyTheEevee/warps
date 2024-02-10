@@ -1,8 +1,8 @@
 name: WarpsV3
 version: '${project.version}'
-main: com.danclouddata.warpsv3.warpsv3.WarpsV3
+main: world.sc2.warps.Warps
 api-version: 1.19
-authors: [ DanMyers ]
+authors: [ ChillyTheEevee ]
 description: Simple plugin for creating warps
 commands:
   hub:

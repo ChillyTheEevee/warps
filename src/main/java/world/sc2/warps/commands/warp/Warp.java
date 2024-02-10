@@ -1,6 +1,7 @@
-package com.danclouddata.warpsv3.warpsv3.commands.home;
+package world.sc2.warps.commands.warp;
 
-import com.danclouddata.warpsv3.warpsv3.util.HomesUtil;
+import org.bukkit.Sound;
+import world.sc2.warps.util.WarpsUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -10,12 +11,11 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import java.util.List;
+public class Warp implements CommandExecutor, TabCompleter {
+    private final WarpsUtil warps;
 
-public class Home implements CommandExecutor, TabCompleter {
-    private final HomesUtil homes;
-
-    public Home(HomesUtil homes){
-        this.homes = homes;
+    public Warp(WarpsUtil warps){
+        this.warps = warps;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,21 +28,23 @@ public class Home implements CommandExecutor, TabCompleter {
             return false;
 
         Player player = (Player) sender;
-        Location home = homes.get(player.getUniqueId(), args[0]);
-        if(home == null) {
+        Location warp = warps.get(args[0]);
+        if(warp == null) {
+            player.playSound(player.getLocation(), Sound.ENTITY_WITHER_BREAK_BLOCK, 1, 1);
             player.sendMessage(ChatColor.RED + "A warp with that name does not exist!");
             return true;
         }
-        player.teleport(homes.get(player.getUniqueId(), args[0]));
-        player.sendMessage(ChatColor.GREEN + "You successfully teleported to the warp: " + ChatColor.DARK_GREEN + args[0] + ChatColor.GREEN + "!");
+
+        player.teleport(warp);
+        player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
+        player.sendMessage(ChatColor.GREEN + "You successfully teleported to the warp: " + ChatColor.DARK_GREEN
+                + args[0] + ChatColor.GREEN + "!");
         return true;
     }
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        if(args.length != 1)
-            return null;
-        List<String> warpList = homes.getHomes(((Player) sender).getUniqueId());
-        return warpList;
+        if (args.length != 1) return null;
+        return warps.getWarps();
     }
 }

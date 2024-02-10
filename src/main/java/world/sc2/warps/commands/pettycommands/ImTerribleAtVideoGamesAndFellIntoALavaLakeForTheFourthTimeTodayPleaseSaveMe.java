@@ -1,6 +1,7 @@
-package com.danclouddata.warpsv3.warpsv3.commands.pettycommands;
+package world.sc2.warps.commands.pettycommands;
 
-import com.danclouddata.warpsv3.warpsv3.WarpsV3;
+import world.sc2.warps.Warps;
+import world.sc2.warps.util.ConfigUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -10,14 +11,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import com.danclouddata.warpsv3.warpsv3.util.ConfigUtil;
 
 import java.util.UUID;
 
 public class ImTerribleAtVideoGamesAndFellIntoALavaLakeForTheFourthTimeTodayPleaseSaveMe implements CommandExecutor {
     private final ConfigUtil configUtil;
 
-    public ImTerribleAtVideoGamesAndFellIntoALavaLakeForTheFourthTimeTodayPleaseSaveMe(WarpsV3 plugin) {
+    public ImTerribleAtVideoGamesAndFellIntoALavaLakeForTheFourthTimeTodayPleaseSaveMe(Warps plugin) {
         configUtil = new ConfigUtil(plugin, "teleportUsage.yml");
     }
 

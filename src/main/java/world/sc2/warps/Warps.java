@@ -1,14 +1,17 @@
-package com.danclouddata.warpsv3.warpsv3;
+package world.sc2.warps;
 
-import com.danclouddata.warpsv3.warpsv3.commands.pettycommands.ImTerribleAtVideoGamesAndFellIntoALavaLakeForTheFourthTimeTodayPleaseSaveMe;
+import world.sc2.warps.commands.warp.*;
+import world.sc2.warps.commands.home.DelHome;
+import world.sc2.warps.commands.home.Home;
+import world.sc2.warps.commands.home.HomeList;
+import world.sc2.warps.commands.home.SetHome;
+import world.sc2.warps.commands.pettycommands.ImTerribleAtVideoGamesAndFellIntoALavaLakeForTheFourthTimeTodayPleaseSaveMe;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.danclouddata.warpsv3.warpsv3.commands.warp.*;
-import com.danclouddata.warpsv3.warpsv3.commands.home.*;
-import com.danclouddata.warpsv3.warpsv3.util.HomesUtil;
-import com.danclouddata.warpsv3.warpsv3.util.WarpsUtil;
+import world.sc2.warps.util.HomesUtil;
+import world.sc2.warps.util.WarpsUtil;
 
-public final class WarpsV3 extends JavaPlugin {
+public final class Warps extends JavaPlugin {
 
     @Override
     public void onEnable() {

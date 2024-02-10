@@ -1,6 +1,6 @@
-package com.danclouddata.warpsv3.warpsv3.util;
+package world.sc2.warps.util;
 
-import com.danclouddata.warpsv3.warpsv3.WarpsV3;
+import world.sc2.warps.Warps;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -12,7 +12,7 @@ import java.util.UUID;
 public class HomesUtil {
     final private ConfigUtil config;
 
-    public HomesUtil(WarpsV3 plugin) {
+    public HomesUtil(Warps plugin) {
         config = new ConfigUtil(plugin, "homes.yml");
     }
 

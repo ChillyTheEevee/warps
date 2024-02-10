@@ -1,16 +1,17 @@
-package com.danclouddata.warpsv3.warpsv3.util;
+package world.sc2.warps.util;
 
-import com.danclouddata.warpsv3.warpsv3.WarpsV3;
+import world.sc2.warps.Warps;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.ArrayList;
 
 public class WarpsUtil {
     private final ConfigUtil config;
 
-    public WarpsUtil(WarpsV3 plugin) {
+    public WarpsUtil(Warps plugin) {
         config = new ConfigUtil(plugin, "warps.yml");
     }
 
@@ -61,6 +62,10 @@ public class WarpsUtil {
     }
 
     public ArrayList<String> getWarps() {
-        return new ArrayList<>(config.getConfig().getConfigurationSection("warps").getKeys(false));
+        ConfigurationSection configurationSection = config.getConfig().getConfigurationSection("warps");
+        if (configurationSection == null) {
+            return null;
+        }
+        return new ArrayList<>(configurationSection.getKeys(false));
     }
 }

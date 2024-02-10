@@ -1,6 +1,6 @@
-package com.danclouddata.warpsv3.warpsv3.commands.warp;
+package world.sc2.warps.commands.warp;
 
-import com.danclouddata.warpsv3.warpsv3.WarpsV3;
+import world.sc2.warps.Warps;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
@@ -11,16 +11,16 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.danclouddata.warpsv3.warpsv3.util.WarpsUtil;
+import world.sc2.warps.util.WarpsUtil;
 
 import java.util.Random;
 
 public class Hub implements CommandExecutor {
 
     private WarpsUtil warps;
-    private WarpsV3 plugin;
+    private Warps plugin;
 
-    public Hub(WarpsV3 plugin, WarpsUtil warps) {
+    public Hub(Warps plugin, WarpsUtil warps) {
         this.plugin = plugin;
         this.warps = warps;
     }

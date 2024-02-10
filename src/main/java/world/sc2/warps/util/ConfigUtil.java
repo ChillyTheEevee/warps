@@ -1,4 +1,4 @@
-package com.danclouddata.warpsv3.warpsv3.util;
+package world.sc2.warps.util;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

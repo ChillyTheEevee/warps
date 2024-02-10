@@ -1,7 +1,7 @@
-package com.danclouddata.warpsv3.warpsv3.commands.warp;
+package world.sc2.warps.commands.warp;
 
 import org.bukkit.Sound;
-import com.danclouddata.warpsv3.warpsv3.util.WarpsUtil;
+import world.sc2.warps.util.WarpsUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;

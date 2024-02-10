@@ -1,4 +1,4 @@
-package com.danclouddata.warpsv3.warpsv3.commands.warp;
+package world.sc2.warps.commands.warp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
-import com.danclouddata.warpsv3.warpsv3.util.WarpsUtil;
+import world.sc2.warps.util.WarpsUtil;
 
 import java.util.List;
 

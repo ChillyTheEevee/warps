@@ -1,6 +1,6 @@
-package com.danclouddata.warpsv3.warpsv3.commands.home;
+package world.sc2.warps.commands.home;
 
-import com.danclouddata.warpsv3.warpsv3.util.HomesUtil;
+import world.sc2.warps.util.HomesUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
