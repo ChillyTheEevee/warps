@@ -1,0 +1,46 @@
+name: WarpsV3
+version: '${project.version}'
+main: com.danclouddata.warpsv3.warpsv3.WarpsV3
+api-version: 1.19
+authors: [ DanMyers ]
+description: Simple plugin for creating warps
+commands:
+  hub:
+    description: Warps the peasants to the hub Mwahahhaha
+    usage: /hub
+  warp:
+    description: Teleports to a warp
+    usage: /warp [warp]
+    permission: warpsv3.warp
+  delwarp:
+    description: Deletes a warp
+    usage: /delwarp [warp]
+    permission: warpsv3.delwarp
+  setwarp:
+    description: Creates a new warp
+    usage: /setwarp [warp]
+    permission: warpsv3.setwarp
+  warplist:
+    description: Displays a list of every warp
+    usage: /warplist
+
+  home:
+    description: Teleports to a home
+    usage: /home [home]
+    permission: warpsv3.home
+  delhome:
+    description: Deletes a home
+    usage: /delhome [home]
+    permission: warpsv3.delhome
+  sethome:
+    description: Creates a new home
+    usage: /sethome [home]
+    permission: warpsv3.homelist
+  homelist:
+    description: Displays a list of every home
+    usage: /homelist
+    permission: warpsv3.homelist
+
+  imterribleatvideogamesandfellintoalavalakeforthefourthtimetodaypleasesaveme:
+    description: Teleports you to your last death location and publicly shames you in chat
+    usage: Figure it out L
